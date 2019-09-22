@@ -3,10 +3,24 @@
 
 #include "pch.h"
 #include <iostream>
+#include"CObject.h"
+using namespace AlphaModeller;
+std::vector<AlphaModeller::CEdge> _edgeVector;
+std::vector<AlphaModeller::CVertex> _vertexVector;
+std::vector<AlphaModeller::CShell> _shellVector;
+CPointVector _pointVector;
+CCurveVector _curveVector;
+CSurfaceVector _surfaceVector;
 
+//CLoopEdgeLinkVector _loopEdgeLinkVector;
+CLoopVector _loopVector;
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	CVolumeObject _object;
+	CPoint _point(0,0,0);
+	_pointVector.push_back(_point);
+	_object.mvfs(&_pointVector.back());
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
